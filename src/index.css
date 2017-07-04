@@ -7,7 +7,10 @@ body {
 .container{
   width: 100%;
   margin: 0 auto;
-  background-color: #d3d3d3;
+}
+
+.lang-list{
+  background-color: #dcdcdc;
 }
 
 a {
@@ -30,4 +33,47 @@ li {
 .spacelistitems li a{
   font-size: 20px;
   font-weight: bold;
+}
+
+.home-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-text{
+  color : #6a1b9a;
+}
+
+.home-text-h1{
+  font-size: 50px;
+  margin-top: 6%;
+  border: 2px solid #6a1b9a;
+  padding: 20px;
+}
+
+.home-text-h2{
+  text-transform: uppercase;
+  border: 2px solid #6a1b9a;
+  padding: 20px;
+}
+
+.button{
+  margin:20px;
+  padding:30px;
+  background: #6a1b9a;
+  width: 200px;
+  border: 2px solid #6a1b9a;
+  color: white;
+  font-size: 25px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 8px 8px 4px #888888;
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover{
+  box-shadow: 3px 3px 2px #888888;
 }

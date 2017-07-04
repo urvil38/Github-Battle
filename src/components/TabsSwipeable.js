@@ -4,6 +4,7 @@ import SwipebleViews from 'react-swipeable-views';
 import Home from './Home';
 import Battle from './Battle';
 import Popular from './Popular';
+import PropTypes from 'prop-types';
 
 class TabsSwipeable extends React.Component{
     constructor(props){
@@ -37,7 +38,7 @@ class TabsSwipeable extends React.Component{
                   onChangeIndex={this.handleChange}
                 >
                     <div>
-                        <Home />
+                        <Home onChange={this.handleChange} />
                     </div>
                     <div>
                         <Battle />
@@ -49,6 +50,21 @@ class TabsSwipeable extends React.Component{
             </div>
         )
     }
+}
+
+Tabs.propTypes = {
+    onChange : PropTypes.func.isRequired,
+    value : PropTypes.number.isRequired
+}
+
+Tab.propTypes = {
+    label : PropTypes.string.isRequired,
+    value : PropTypes.number.isRequired
+}
+
+SwipebleViews.propTypes = {
+    onChangeIndex : PropTypes.func.isRequired,
+    index : PropTypes.number.isRequired
 }
 
 export default TabsSwipeable;

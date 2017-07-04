@@ -3,6 +3,7 @@ import { Tabs, Tab } from 'material-ui/Tabs';
 import { Card } from 'material-ui/Card';
 import api from '../utility/api';
 import CircularProgressThick from './Progress';
+import PropTypes from 'prop-types';
 
 //---------------------------------------------------------------//
 
@@ -127,6 +128,14 @@ class Popular extends React.Component {
       </div>
     )
   }
+}
+
+SelectedLanguage.propTypes = {
+  onSelect : PropTypes.func.isRequired
+}
+
+RepoGrid.propTypes = {
+  repos : PropTypes.array.isRequired
 }
 
 export default Popular;
