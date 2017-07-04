@@ -5,9 +5,7 @@ class App extends React.Component{
     render(){
         return (
                 <MuiThemeProvider>
-                    <div className='container'>
-                        <TabsSwipeable />        
-                    </div>
+                     <TabsSwipeable />        
                 </MuiThemeProvider>
         )
     }

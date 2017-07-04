@@ -42,6 +42,13 @@ li {
   flex-direction: column;
 }
 
+.battle-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .home-text{
   color : #6a1b9a;
 }

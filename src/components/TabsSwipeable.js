@@ -23,6 +23,7 @@ class TabsSwipeable extends React.Component{
     }
 
     render(){
+
         return(
             <div>
                 <Tabs 
@@ -33,7 +34,7 @@ class TabsSwipeable extends React.Component{
                     <Tab label='Battle' value={1} />
                     <Tab label='Popular repos' value={2} />
                 </Tabs>
-                <SwipebleViews
+                <SwipebleViews animateHeight='true'
                   index={this.state.slideIndex}
                   onChangeIndex={this.handleChange}
                 >
@@ -43,7 +44,7 @@ class TabsSwipeable extends React.Component{
                     <div>
                         <Battle />
                     </div>
-                    <div>
+                    <div>                       
                         <Popular />
                     </div>
                 </SwipebleViews>
@@ -54,12 +55,12 @@ class TabsSwipeable extends React.Component{
 
 Tabs.propTypes = {
     onChange : PropTypes.func.isRequired,
-    value : PropTypes.number.isRequired
+    value : PropTypes.number
 }
 
 Tab.propTypes = {
     label : PropTypes.string.isRequired,
-    value : PropTypes.number.isRequired
+    value : PropTypes.number
 }
 
 SwipebleViews.propTypes = {
