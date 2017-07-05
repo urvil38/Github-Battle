@@ -23,7 +23,6 @@ class TabsSwipeable extends React.Component{
     }
 
     render(){
-
         return(
             <div>
                 <Tabs 
@@ -32,7 +31,7 @@ class TabsSwipeable extends React.Component{
                 >
                     <Tab label='Home' value={0} />
                     <Tab label='Battle' value={1} />
-                    <Tab label='Popular repos' value={2} />
+                    <Tab label='Popular repositories' value={2} />
                 </Tabs>
                 <SwipebleViews animateHeight='true'
                   index={this.state.slideIndex}
@@ -42,7 +41,7 @@ class TabsSwipeable extends React.Component{
                         <Home onChange={this.handleChange} />
                     </div>
                     <div>
-                        <Battle />
+                        <Battle path={this.props}/>
                     </div>
                     <div>                       
                         <Popular />

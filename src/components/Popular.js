@@ -12,7 +12,7 @@ function handleAvtive(tab) {
 }
 
 function SelectedLanguage(props) {
-  let languages = ['All', 'Javascript', 'CSS', 'Ruby', 'Java', 'Python', 'Go', 'C', 'PHP'];
+  let languages = ['All', 'Javascript', 'CSS', 'Ruby', 'Java', 'Python','Swift','Go', 'C', 'PHP'];
   return (
     <Tabs>
       {languages.map((lang) => {
@@ -76,7 +76,7 @@ function RepoGrid(props) {
                     alt={'Avatar for ' + repo.owner.login}
                   />
                 </li>
-                <li><a href={repo.html_url}>{repo.name}</a></li>
+                <li><a target='_blank' href={repo.html_url}>{repo.name}</a></li>
                 <li>@{repo.owner.login}</li>
                 <li>{repo.stargazers_count} stars</li>
               </ul>
