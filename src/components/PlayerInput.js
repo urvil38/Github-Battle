@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import Card from 'material-ui/Card';
+import Paper from 'material-ui/Paper';
 
 class PlayerInput extends React.Component{
     constructor(props){
@@ -55,7 +55,7 @@ class PlayerInput extends React.Component{
         return (
             <div>
                 <div className='column'>
-                    <Card style={styleCard.card}>
+                    <Paper zDepth={2} style={styleCard.card}>
                         <form className='column' onSubmit={this.handleSubmit}>
                             <label className='home-text home-text-h2' htmlFor='username'>{this.props.label}</label>
                             <TextField
@@ -77,7 +77,7 @@ class PlayerInput extends React.Component{
                                 disabled={!this.state.username}
                                 onTouchTap={this.handleSubmit} />
                         </form>
-                    </Card>
+                    </Paper>
                 </div>
             </div>
         )

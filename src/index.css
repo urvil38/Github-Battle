@@ -60,10 +60,33 @@ li {
   padding: 20px;
 }
 
+.result-text-h1{
+  font-size: 25px;
+  margin-top: 3%;
+  border: 2px solid #6a1b9a;
+  padding: 15px;
+  background: #6a1b9a;
+  color : #FFF;
+}
+
 .home-text-h2{
   text-transform: uppercase;
   border: 2px solid #6a1b9a;
   padding: 20px;
+}
+
+.result-text-h2{
+  text-transform: uppercase;
+  border: 2px solid #6a1b9a;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #6a1b9a;
+  color : #FFF;
+}
+
+.anchor{
+  display: block;
+  height: 50px;
 }
 
 .button{
@@ -96,7 +119,6 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 
 .column-battle{
@@ -128,4 +150,25 @@ label{
   padding: 10px;
   background: #6a1b9a;
   box-shadow: 0px 1px 6px 2px #888888;
+}
+
+.error{
+  color : #D50000;
+  border: 2px solid #D50000;
+  text-transform: uppercase;
+  text-align: center;
+  padding:10px;
+}
+
+.div-error{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.anchor{
+  overflow-x: auto;
+  overflow-y: auto;
 }

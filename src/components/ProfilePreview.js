@@ -1,7 +1,7 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import { Card } from 'material-ui/Card';
 import CircularProgress from 'material-ui/CircularProgress';
+import Paper from 'material-ui/Paper';
 
 class ProfilePreview extends React.Component{
     constructor(props){
@@ -42,7 +42,7 @@ class ProfilePreview extends React.Component{
     return(
         <div>
             <div className='column'>
-                <Card style={style.card}>
+                <Paper zDepth={2} style={style.card}>
                     {!this.state.isAvatar
                      ? <CircularProgress />
                      : <img 
@@ -57,7 +57,7 @@ class ProfilePreview extends React.Component{
                     labelColor='white'
                     style={style.buttonStyle} 
                     onTouchTap={this.props.onReset.bind(null,this.props.id)} />
-                </Card>
+                </Paper>
             </div>
         </div>
     )}

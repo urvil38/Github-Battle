@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Github-Battle",
+  "name": "Battle ground for github users",
   "icons": [
     {
       "src": "favicon.ico",
