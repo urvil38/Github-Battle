@@ -31,7 +31,7 @@ function Player(props){
         <div>
             <div className='column'>
                 <Paper zDepth={2} style={style.card}>
-                    <h1 className='home-text result-text-h1'>{props.label}</h1>
+                    <h1 className='home-text result-text-h1'>{props.draw ? 'Draw' : props.label } </h1>
                     <h2 className='home-text result-text-h2'>Score : {props.score}</h2>
                     <img 
                         style={style.avatar}
@@ -67,7 +67,8 @@ class Result extends React.Component{
             error: null,
             loser: null,
             winner: null,
-            loading: true
+            loading: true,
+            draw: false
         }
     }
 
@@ -87,7 +88,8 @@ class Result extends React.Component{
                 error : null,
                 winner : result[0],
                 loser : result[1],
-                loading : false
+                loading : false,
+                draw: false
             });
         })
     }
@@ -98,12 +100,19 @@ class Result extends React.Component{
         let winner = this.state.winner;
         let loading = this.state.loading;
         let error = this.state.error;
-        console.log(this.state);
+        
         let style = {
             progressStyle : {
                 'textAlign' : 'center',
                 'marginTop' : '25px'
             } 
+        }
+        if(winner && loser){
+            if(winner.score === loser.score){
+                this.setState({
+                    draw: true
+                })
+            }
         }
 
         return(
@@ -135,6 +144,7 @@ class Result extends React.Component{
                 {!error && !loading &&
                 <div className='row'>
                     <Player
+                        draw={this.state.draw}
                         label='Winner'
                         score={winner.score}
                         profile={winner.profile}
@@ -147,6 +157,7 @@ class Result extends React.Component{
                         </Link>
                     </div> 
                     <Player 
+                        draw={this.state.draw}
                         label='Loser'
                         score={loser.score}
                         profile={loser.profile}

@@ -83,7 +83,7 @@ function RepoGrid(props) {
             </li>
           </Card>
         )
-      })}
+      })}import CircularProgressThick from './Progress';
     </ul>
   )
 }
