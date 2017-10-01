@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 //---------------------------------------------------------------//
 
-function handleAvtive(tab) {
+function handleActive(tab) {
   tab.props.onSelect(tab.props.label);
 }
 
@@ -21,7 +21,7 @@ function SelectedLanguage(props) {
             label={lang}
             key={lang}
             onSelect={props.onSelect}
-            onActive={handleAvtive}
+            onActive={handleActive}
           >
           </Tab>
         )
@@ -83,7 +83,7 @@ function RepoGrid(props) {
             </li>
           </Card>
         )
-      })}import CircularProgressThick from './Progress';
+      })}
     </ul>
   )
 }
@@ -98,11 +98,11 @@ class Popular extends React.Component {
     }
     this.updateLanguage = this.updateLanguage.bind(this);
   }
-
+  
   componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage);
   }
-
+  
   updateLanguage(lang) {
     this.setState({
       selectedLanguage: lang,

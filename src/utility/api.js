@@ -1,8 +1,6 @@
 import axios from 'axios';
-
-const clientId = '3032b58703e2aeb2ade5';
-const clienSecret = '5c352a9aa90afa539abc9bd30d141543c4ac5f88';
-const params = '?clinet_id=' + clientId + '&client_secret=' + clienSecret; 
+import config from '../config/config.json';
+const params = '?clinet_id=' + config.clientId + '&client_secret=' + config.clientSecret; 
 
 function getProfile(username){
     return axios.get('https://api.github.com/users/' + username + params)
@@ -64,11 +62,10 @@ export default {
 
     fetchRepo: function (language) {
         let encodedURI = window.encodeURI('https://api.github.com/search/repositories?q=stars:>1+language:' + language + '&sort=stars&order=desc&type=Repositories' + params);
-
         return axios.get(encodedURI)
             .then((response) => {
                 return response.data.items;
-            })
+        })
     }
 }
 

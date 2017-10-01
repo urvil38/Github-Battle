@@ -2,6 +2,7 @@ import React from 'react';
 import ProfilePreview from './ProfilePreview';
 import PlayerInput from './PlayerInput';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Battle extends React.Component{
     constructor(props){
@@ -20,7 +21,7 @@ class Battle extends React.Component{
         this.setState(() => {
             let newState = {};
             newState[id + 'Name'] = username;
-            newState[id + 'Image'] = 'http://github.com/' + username + '.png?size=200';
+            newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
             return newState;
         })
     }
@@ -54,7 +55,7 @@ class Battle extends React.Component{
                         />
                     }
 
-                    {playerOneImage !== null &&
+                    {playerOneImage &&
                         <ProfilePreview 
                         id='playerOne'
                         username={playerOneName}
@@ -66,19 +67,20 @@ class Battle extends React.Component{
                     {playerOneImage && playerTwoImage 
                     ?
                     <div className='button-battle'> 
-                        <Link
-                           className='button result-button'
-                            to={{
-                                pathname: match.url + 'results',
-                                search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
-                            }}>
-                        Battle
-                        </Link>
+                        <button className='button link-button'>
+                            <Link className='textcolor'
+                                to={{
+                                    pathname: match.url + 'results',
+                                    search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
+                                }}>
+                            Battle
+                            </Link>
+                        </button>
                     </div> 
                     : <div className='vs'><h1 className='vsh1'>Vs</h1></div>    
                     }
 
-                    {playerTwoImage !== null &&
+                    {playerTwoImage &&
                         <ProfilePreview 
                         id='playerTwo'
                         username={playerTwoName}
@@ -98,6 +100,12 @@ class Battle extends React.Component{
             </div>
         )
     }
+}
+
+PlayerInput.propTypes = {
+    id : PropTypes.string.isRequired,
+    label : PropTypes.string.isRequired,
+    onSubmit : PropTypes.func.isRequired
 }
 
 export default Battle;

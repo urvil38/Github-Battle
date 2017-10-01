@@ -39,7 +39,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .battle-container{
@@ -55,7 +55,7 @@ li {
 
 .home-text-h1{
   font-size: 50px;
-  margin-top: 6%;
+  margin-top: 60px;
   border: 2px solid #6a1b9a;
   padding: 20px;
 }
@@ -67,6 +67,7 @@ li {
   padding: 15px;
   background: #6a1b9a;
   color : #FFF;
+  text-transform: uppercase;
 }
 
 .home-text-h2{
@@ -129,10 +130,21 @@ li {
 
 .button-battle{
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .result-button{
   margin: 0;
+}
+
+.link-button{
+  text-align: center;
+  width: 200px;
+}
+
+.textcolor{
+  color: white;
 }
 
 

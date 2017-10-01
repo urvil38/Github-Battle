@@ -12,7 +12,7 @@ class App extends React.Component{
                     <div>
                         <Route exact path='/' component={TabsSwipeable} />
                         <Route path='/results' component={Result} />       
-                        </div>
+                    </div>
                 </Router>
             </MuiThemeProvider>
         )
