@@ -67,15 +67,16 @@ class Battle extends React.Component{
                     {playerOneImage && playerTwoImage 
                     ?
                     <div className='button-battle'> 
-                        <button className='button link-button'>
-                            <Link className='textcolor'
-                                to={{
-                                    pathname: match.url + 'results',
-                                    search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
-                                }}>
-                            Battle
-                            </Link>
-                        </button>
+                        <Link className='textcolor'
+                            to={{
+                                pathname: match.url + 'results',
+                                onReset: this.props.onChange,
+                                search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
+                            }}>
+                            <button className='button link-button'>
+                                Battle
+                            </button>
+                        </Link>
                     </div> 
                     : <div className='vs'><h1 className='vsh1'>Vs</h1></div>    
                     }

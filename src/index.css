@@ -184,3 +184,8 @@ label{
   overflow-x: auto;
   overflow-y: auto;
 }
+
+.height{
+  height: auto;
+  overflow-x: auto;
+}

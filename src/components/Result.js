@@ -58,7 +58,7 @@ function Player(props){
                     <Divider />
                     {<h3 style={style.texth2}>PUBLIC REPOS : {info.public_repos}</h3>}
                     <Divider />
-                    {info.blog && <div style={{'height':'auto'}}><h3 style={style.texth2}><a style={{'color' : '#6a119a'}} target='_blank' href={info.blog}>{info.blog}</a></h3></div>}
+                    {info.blog && <div className='height'><h3 style={style.texth2}><a style={{'color' : '#6a119a'}} target='_blank' href={info.blog}>{info.blog}</a></h3></div>}
                     <Divider />
                 </Paper>
             </div>
@@ -77,7 +77,7 @@ class Result extends React.Component{
             open: false,
             snakebarisopen: false,
             copied: false,
-            link: window.location.href
+            link: null
         }
         this.handleClose = this.handleClose.bind(this)
         this.handleOpen = this.handleOpen.bind(this)
@@ -121,7 +121,8 @@ class Result extends React.Component{
                 error : null,
                 winner : result[0],
                 loser : result[1],
-                loading : false
+                loading : false,
+                link : window.location.href
             });
         })
     }
@@ -201,15 +202,16 @@ class Result extends React.Component{
                 }
                 {error && !loading && 
                 <div className='div-error'>
+                    {console.log(this.props)}
                     <h2 className='error'>{error}</h2>
-                    <Link to='/'>
+                    {/* <Link to='/'> */}
                         <RaisedButton 
                         label="Reset" 
                         backgroundColor='#6a1b9a'
                         labelColor='white'
-                        style={style.buttonStyle} 
+                        style={style.buttonStyle}
                         />
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 }
                 {!error && !loading &&
@@ -221,12 +223,12 @@ class Result extends React.Component{
                         profile={winner.profile}
                         stars={winner.totalStars} />
                     <div className='button-battle'> 
-                        <button className='button link-button'>
-                            <Link className='textcolor'
-                                to='/'>
-                            Home
-                            </Link>
-                        </button>
+                        <Link className='textcolor'
+                            to='/'>
+                            <button className='button link-button'>
+                                Home
+                            </button>
+                        </Link>
                         <div>
                             <button className='button' onClick={this.handleOpen}>share</button>
                             <Dialog
