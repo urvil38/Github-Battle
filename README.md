@@ -1,6 +1,6 @@
 # GitHub-Battle
 
-A app in which,Github user battle between their profile and give the winner and loser based on stars and followers.
+A website in which,Github user battle between their profile and give the winner and loser based on stars and followers.
 
 ![Gif of Project](https://github.com/urvil38/Github-Battle-React/blob/master/public/github-battle.gif "Github-battle")
 
