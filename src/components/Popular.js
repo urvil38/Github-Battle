@@ -8,18 +8,80 @@ import PropTypes from 'prop-types';
 //---------------------------------------------------------------//
 
 function handleActive(tab) {
-  tab.props.onSelect(tab.props.label);
+  tab.props.onSelect(tab.props.value);
 }
 
 function SelectedLanguage(props) {
-  let languages = ['All', 'Javascript', 'CSS', 'Ruby', 'Java', 'Python','Swift','Go', 'C', 'PHP'];
+  let languages = [
+    {
+      'label':'All',
+      'value':'all'
+    },
+    {
+      'label':'Javascript',
+      'value':'javascript'
+    },
+    {
+      'label':'CSS',
+      'value':'css'
+    },
+    {
+      'label':'Ruby',
+      'value':'ruby'
+    },
+    {
+      'label':'Java',
+      'value':'java'
+    },
+    {
+      'label':'Python',
+      'value':'python'
+    },
+    {
+      'label':'Swift',
+      'value':'swift'
+    },
+    {
+      'label':'Rust',
+      'value':'rust'
+    },
+    {
+      'label':'Haskell',
+      'value':'haskell'
+    },
+    {
+      'label':'Go',
+      'value':'go'
+    },
+    {
+      'label':'Scala',
+      'value':'scala'
+    },
+    {
+      'label':'c',
+      'value':'c'
+    },
+    {
+      'label':'c#',
+      'value':'csharp'
+    },
+    {
+      'label':'c++',
+      'value':'cpp'
+    },
+    {
+      'label':'PHP',
+      'value':'php'
+    }
+  ]
   return (
     <Tabs>
       {languages.map((lang) => {
         return (
           <Tab
-            label={lang}
-            key={lang}
+            label={lang.label}
+            value={lang.value}
+            key={lang.label}
             onSelect={props.onSelect}
             onActive={handleActive}
           >
