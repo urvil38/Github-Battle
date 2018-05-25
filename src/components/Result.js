@@ -169,7 +169,7 @@ class Result extends React.Component{
         const actions = [
             <FlatButton
                 label="Cancel"
-                labelStyle={style.labelCancle}
+                labelStyle={style.labelCancel}
                 onClick={this.handleClose}
             />,
             <CopyToClipboard text={this.state.link}
