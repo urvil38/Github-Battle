@@ -15,7 +15,6 @@
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
-    "firebase-cli": "^1.2.0",
     "firebase-tools": "^3.9.1",
     "react-scripts": "1.0.10"
   },

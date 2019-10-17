@@ -204,14 +204,14 @@ class Result extends React.Component{
                 <div className='div-error'>
                     {console.log(this.props)}
                     <h2 className='error'>{error}</h2>
-                    {/* <Link to='/'> */}
+                    <Link to='/'>
                         <RaisedButton 
                         label="Reset" 
                         backgroundColor='#6a1b9a'
                         labelColor='white'
                         style={style.buttonStyle}
                         />
-                    {/* </Link> */}
+                    </Link>
                 </div>
                 }
                 {!error && !loading &&

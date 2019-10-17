@@ -41,7 +41,7 @@ class TabsSwipeable extends React.Component{
                         <Home onChange={this.handleChange} />
                     </div>
                     <div>
-                        <Battle path={this.props} onChange={this.handleChange}/>
+                        <Battle path={this.props} />
                     </div>
                     <div>                       
                         <Popular />

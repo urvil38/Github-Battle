@@ -50,6 +50,10 @@ function SelectedLanguage(props) {
       'value':'haskell'
     },
     {
+      'label':'Erlang',
+      'value':'erlang'
+    },
+    {
       'label':'Go',
       'value':'go'
     },
